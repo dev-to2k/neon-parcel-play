@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; media-src 'self' data: blob:; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#0B0F1A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Neon Parcel">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="fonts/fusion-pixel-12px-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<title>Neon Parcel — rooftop night courier</title>
+<style>
+  html,body{margin:0;height:100%;background:#05071a;color:#fff;font-family:'HubPixel';font-size:12px;-webkit-font-smoothing:none;font-smooth:never;overflow:hidden}
+  #wrap{position:relative;width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+  #frame{position:relative;box-shadow:0 0 0 3px #0B0F1A,0 0 0 5px #ff2bd6,0 0 40px #ff2bd655,0 0 80px #2bfff233}
+  canvas{display:block;image-rendering:pixelated;image-rendering:crisp-edges;touch-action:none}
+  #scan{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
+  @font-face{font-family:'HubPixel';src:url('fonts/fusion-pixel-12px-latin.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block}
+  html.font-failed,html.font-failed body{font-family:ui-monospace,monospace}
+  #help{font-size:12px;letter-spacing:0;line-height:16px;color:#2bfff2;opacity:.92;text-align:center;max-width:100%;padding:0 16px;box-sizing:border-box}
+  #help b{color:#ff2bd6}
+  body[data-state=play] #help,body[data-state=pause] #help{visibility:hidden}
+</style>
+<link rel="stylesheet" href="touch.css">
+</head>
+<body data-state="title">
+<div id="wrap">
+  <div id="frame"><canvas id="game" width="480" height="270" aria-label="Neon Parcel"></canvas><div id="scan"></div></div>
+  <div id="help"><b>A/D</b> chạy · <b>SPACE/W</b> nhảy (giữ = cao hơn) · <b>E</b> nói chuyện, nhận đơn · <b>đạp</b> drone và trùm · <b>S</b> dậm trên không · <b>SHIFT</b> lướt mái · <b>giữ S</b> tăng tốc (kỹ năng mở theo Đêm) · <b>P/Esc</b> tạm dừng · <b>M</b> tắt tiếng</div>
+</div>
+<div id="touch" hidden></div>
+<div id="rotate" hidden><p>Xoay ngang màn hình để chơi</p></div>
+<script defer src="np-classic.3192951067.js"></script>
+<script type="module" src="np-game.ee7f40e6e1.js"></script>
+<link rel="modulepreload" href="np-dun.2605c77438.js">
+<link rel="modulepreload" href="np-forge.b5a0d68ddf.js">
+<link rel="modulepreload" href="np-touch.bc1f2219bd.js">
+</body>
+</html>

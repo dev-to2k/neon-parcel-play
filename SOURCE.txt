@@ -1,0 +1,4 @@
+Built from the private repo dev-to2k/neon-parcel
+master efeb4a4d68a3bcdcc18b789355fe5ed6266ebbe7
+Built Asia/Saigon 2026-11-12 07:47:22 +07
+This is a minified production build (npm run build). No source, no source maps.

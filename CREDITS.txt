@@ -1,0 +1,534 @@
+Neon Parcel credits
+This file ships next to index.html. It is not a license for the whole game.
+No project LICENSE has been chosen.
+
+Mailbox at the drop point
+  Sprite: art/depot/mailbox-flag-up.png
+  Author: Molly "Cougarmint" Willits
+  Source: https://opengameart.org/content/maibox-sprite-pack
+  License: https://creativecommons.org/licenses/by/3.0/
+  The page and the flag-up patch readme grant CC-BY 3.0.
+  The older pack readme also named CC-BY-SA 3.0. The project page says the
+  licence was changed to CC-BY.
+  Modification: shortened post; head and flag retained at native pixels.
+  This sprite stays CC-BY 3.0. It is not a Kenney CC0 file.
+
+Touch controls
+  Sprites: art/touch/
+  Author: Kenney
+  Source: https://kenney.nl/assets/mobile-controls
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Style A discs, stick, and white icons. No pixel was edited.
+  A 1px cyan ring is CSS, not a new sprite.
+
+Courier
+  Sprites: art/courier/idle.png, run.png, jump.png, fall.png, dash.png, hit.png
+  Author: pixelgearz
+  Source: https://pixelgearz.itch.io/pixel-art-platformer-character
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page says CC0 1.0 and that no generative AI was used.
+  Credit is not required. It is recorded here anyway.
+  Modification: the two shirt reds (228,59,68) and (160,46,58) were
+  mapped offline to the courier greens #39FF14 and #1f9e0b.
+  Every other pixel is the author's. The cells are 16×16, drawn at 1×.
+  No resample. The foot pixel sits on atlas row 20.
+  Untouched copies are in art/courier/source/.
+
+Drone and gunner
+  Sprites: art/drone/drone.png and art/drone/gunner.png
+  Author: RUOK
+  Source: https://opengameart.org/content/pixel-art-drone
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page dedicates the file to CC0. Credit is not required.
+  It is recorded here anyway.
+  Source file: art/drone/source/drone.png, 113×57, two frames.
+  Modification: each frame was cropped to 54×36 and scaled by 1/3
+  with nearest-neighbor to 18×12. Source alphas below 128 were set
+  to 0 and the rest to 255, so the soft fringe did not survive the
+  scale. The gunner sheet maps the light body pixels to gold.
+  The black arms are the author's pixels.
+  The white body is what stays visible on the night city.
+
+Items
+  Sprites: art/items/*.png
+  Author: Kenney
+  Series: Pixel Platformer, plus the Food, Industrial, and Farm expansions
+  Author pages:
+    https://kenney-assets.itch.io/pixel-platformer
+    https://kenney-assets.itch.io/pixel-platformer-food-expansion
+    https://kenney-assets.itch.io/pixel-platformer-industrial-expansion
+    https://kenney-assets.itch.io/pixel-platformer-farm-expansion
+  Byte mirrors (kenney.nl returned 403 from this environment):
+    https://opengameart.org/content/pixel-platformer-0
+    https://opengameart.org/content/pixel-platformer-food-expansion
+    https://opengameart.org/content/pixel-platformer-industrial-expansion
+    https://opengameart.org/content/pixel-platformer-farm-expansion
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Each itch page says CC0 1.0 Universal and that no generative AI was used.
+  The OpenGameArt posts by Kenney also list CC0.
+  Credit is not required. It is recorded here anyway.
+  Cells are 18×18. Offline edits are crop, a hue/sat/value LUT, and
+  nearest-neighbor downscale by an integer factor when the cell is larger
+  than the draw box. Derived files are drawn at 1×. Alpha is 0 or 255.
+  Untouched tiles are in art/items/source/.
+  The map of each item, the gaps, and the pickup boxes is art/items/LEDGER.txt.
+
+Shielder
+  Sprite: art/boss/shielder.png
+  Author: Kitsune64
+  Source: https://opengameart.org/content/a-statue-of-a-knight-in-pixel-art
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Source file: art/boss/source/statue.png, 32×64.
+  Modification: scaled by 1/2 with nearest-neighbor to 16×32.
+  Alphas below 128 became 0. The moving plate and the hit pips stay.
+
+Dasher
+  Sprite: art/boss/dasher.png
+  Author: The_Scientist
+  Source: https://opengameart.org/content/ufo-boss-set
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Source files: art/boss/source/GreenUFO_NoDmg.png and
+  GreenUFO_HighDmg.png, each 96×128.
+  Modification: the top saucer, columns 8–87, scaled by 1/2
+  with nearest-neighbor to 40×16. The damaged saucer is the
+  second row, used when the dasher frame is 24 or higher.
+  It is drawn at y+5 inside the 40×26 cell.
+
+Hub street: buildings, props, and townsfolk
+  Sprites: art/street/street-day.png, street-dusk.png, street-night.png
+  Author: GrafxKid
+  Source: https://opengameart.org/content/city-mega-pack
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page lists CC0. Credit is not required. It is recorded here anyway.
+  Source file: art/_src/street/CITY_MEGA.png, 1952x2800, unchanged.
+  Modification, all offline in art/_src/street/build.py: six buildings,
+  twelve props, six people, and nine pieces of room furniture were cut
+  out at native pixels and packed into one 512x375 atlas. The bed in the room is not from
+  the pack; build.py draws it. One repeated floor was removed from the brick
+  block and two from the blue block. The shop signs are the author's
+  pixels, unchanged. The dusk and night atlases
+  are a per-channel multiply of the day atlas. On the night atlas some
+  window panes are relit. No pixel was rescaled.
+
+Hub street: traffic and parked bikes
+  Sprites: inside the same art/street/ atlases
+  Author: Kenney
+  Source: https://opengameart.org/content/pixel-vehicle-pack
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Ten unchanged PNGs are in art/_src/street/kenney-cars/ with the pack's
+  License.txt. Modification: the two riders are a rider sprite composited
+  behind its bike, and the atlas tint above. No pixel was rescaled.
+
+Sewer foes, open chest, ladder, and way-home door
+  Sprite: art/dungeon/tiles.png
+  Author: Kenney
+  Source: https://opengameart.org/content/tiny-dungeon
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Source file: art/_src/dungeon/tilemap_packed.png, 192x176, unchanged,
+  with the pack's License.txt. Seven 16x16 cells are copied into one
+  strip by art/_src/dungeon/build.py. No pixel was edited or rescaled.
+  The game's "hound" draws the pack's brown rat, and the crab cell
+  draws, only when CharSkin's hound / crab sheets (below) are missing.
+  The rat always draws this pack's rat. Spikes, lanterns, and
+  the sewer walls are still the older drawing.
+
+Hub NPCs
+  Sprite: art/hub/npcs.png
+  Author: OVFudj
+  Source: https://opengameart.org/content/modern-rpg-guy
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page lists CC0. Credit is not required. It is recorded here anyway.
+  Source file: art/hub/source/24by24ModernRPGGuy.png, 96×96.
+  Modification: the first two frames of the side walk, pasted at
+  native pixels into 24×24 cells, five times. Coat, hair, skin and
+  trousers are recoloured with exact colour lookups, three rows are
+  mirrored, and the outline is #0B0F1A. The pack has one figure.
+  The vendor's leaf hat, the landlord's hair bun and bow, and the
+  pilot's goggles are drawn by tools/hub-art-bake.py and are not
+  from the pack. The hammer, cart, book stack, notice board, scarf,
+  night rim light and every talk portrait stay code.
+
+Hub far skyline
+  Plates: art/hub/far-day.png, art/hub/far-night.png
+  Author: ansimuz (Luis Zuno)
+  Source: https://ansimuz.itch.io/warped-city
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Source file: art/neon/warped/buildings-bg.png.
+  See docs/ASSET_LICENSES.md for the download record.
+  Modification: one crop without the tall mast, mirror-tiled five
+  times to 565×70 and recoloured to the day or night colours of the
+  code band it replaces. It is drawn at 0.55 alpha behind the street.
+  The house fronts, doors, signs, stall, sidewalk and road stay code.
+  Per-file notes are in art/hub/LEDGER.txt.
+
+Skill wells and hub tab icons
+  Sprites: art/ui/skill-{stomp,slam,dash,mag,dj,od}{,-act,-off}.png (11x11)
+           art/ui/tab-{mat,gem,gear,use,board,mail,home}{,-off}.png (8x8)
+  Author: Kenney
+  Source: https://kenney.nl/assets/micro-roguelike (Micro Roguelike 1.4)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Source file: art/_src/ui/kenney-micro-roguelike_colored_tilemap_packed.png
+  Modification: one 8x8 cell per icon at native pixels (a few rotated by
+  90 degrees), the cell ground made transparent, then two tones of the old
+  state colour. Skill wells keep the old #0B0F1A 11x11 well.
+  Built by art/_src/ui/build.py.
+
+Dungeon spikes (up)
+  Sprite: art/dungeon/spikes.png (16x16)
+  Author: froggu999
+  Source: https://froggu999.itch.io/stabby-spikes
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page says "CC0. Commercial and non-commercial use OK."
+  Source file: art/_src/ui/froggu999-moving-spikes-32x32-scaled-64x64.png
+  Modification: the file is an exact 2x upscale; it was taken back to
+  32x32 cells, the fully-up frame split into its three spears, each
+  spear block-downscaled 2x to 5x12 and remapped to steel and the
+  dungeon rust. Blade tops sit 12px above the floor, the up hitbox.
+  The 16x3 rust base and the wind-up warning pips stay code.
+
+Gunner shot and boss stun star
+  Sprites: art/fx/shot.png (6x6), art/fx/stun-star.png (6x6)
+  Author: Kenney
+  Source: https://kenney.nl/assets/pixel-shmup (Pixel Shmup 1.1)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Source file: art/_src/ui/kenney-pixel-shmup_tiles_packed.png
+  Modification: shot is cell (9,0) at 1x, grey ring -> #ff3355; star is
+  cell (6,0) block-downscaled 2x, -> #ffc857. White cores kept.
+  Shot collision is unchanged (centre distance in game.js).
+
+Falling bomb
+  Sprite: art/fx/bomb.png (14x13)
+  Author: Kenney
+  Source: https://kenney.nl/assets/1-bit-pack (1-Bit Pack 1.2)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Source file: art/_src/ui/kenney-1-bit-pack_colored-transparent_packed.png
+  Modification: cell (45,9) at 1x, ink filled with body / fuse / spark
+  colours, enclosed gaps as shine, plus a 1px #0B0F1A outline.
+  The roof crosshair tell stays code. The 28x28 hurt box is unchanged.
+
+Event blimp
+  Sprite: art/fx/blimp.png (60x21)
+  Author: mujtaba-io
+  Source: https://opengameart.org/content/airship-and-hot-air-balloon
+  File: https://opengameart.org/sites/default/files/airship_3.png
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page lists CC0 and says "feel free to do anything with it."
+  Source file: art/_src/ui/mujtaba-io-airship.png (250x140, smooth-shaded,
+  not pixel art at that size).
+  Modification: mirrored so the nose leads, cropped to the ship, an exact
+  4x box downscale (alpha-weighted mean, under 50% alpha dropped), then
+  the stripes, fins and gondola mapped to the old blimp ramp
+  (#3a3f7a / #4a5190 / #6a73b8, #2a2f5a) and a 1px #0B0F1A outline.
+  The banner word, gondola lights, propeller and drop beam stay code.
+
+Dungeon door frames, arches and wall niches
+  Sprites: art/dungeon/door-f{1,2,3}.png (48x92), arch-f{1,2,3}.png (28x28),
+           niche-f{1,2,3}.png (16x12)
+  Author: Kenney
+  Source: https://kenney.nl/assets/tiny-dungeon (Tiny Dungeon 1.0)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Source file: art/_src/dungeon/tilemap_packed.png (already in the repo)
+  Modification: the grey brick cell (4,3) tiled to each box and its three
+  tones mapped onto the old per-floor body colour. The door keeps the
+  old jamb, lintel and sill boxes with the middle open; the arch keeps the
+  16x20 opening and sill; the niche keeps the ink rim and latch.
+  The hanging-sign brackets beside doors and arches stay code.
+
+Other notices
+  See CREDITS.md and art/sewer/CREDITS.txt.
+
+Rival courier
+  Sprites: art/rival/run.png (64x22, 4 cells), art/rival/jump.png (32x22, 2 cells)
+  Author: Alex's Assets
+  Source: https://alexs-assets.itch.io/16x16-character
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The itch page's asset license reads "Creative Commons Zero v1.0
+  Universal" and says no generative AI was used. Credit is not required.
+  Source frames: art/_src/chars/alex/ (Walk_0-3, Jump_1, Fall_0), unchanged.
+  Modification (art/_src/chars/build.py): palette map only (greens to the
+  rival reds #ff5a3c / #ff8a70 / #a8281a, red scarf to #00e5ff, yellow to
+  #c8fbff, black to #0b0f1a), horizontal flip so she runs right, and each
+  16x16 frame placed in the old 16x22 cell with the foot on row 20.
+  No resample.
+
+Rooftop cats and the hub cat
+  Sprite: art/cat/cats.png (112x80; 7 cells x 5 coats)
+  Author: kotnaszynce
+  Source: https://opengameart.org/content/cute-kitty-animated-set
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page lists CC0. Source frames: art/_src/chars/kitty/, unchanged
+  (idle 1-4 from 1.zip, walk 1-3 from 2.zip, renamed only).
+  Modification: the brown ramp is mapped onto five coats (orange,
+  lavender, white, blackout navy, hub cream), the outline to #0b0f1a,
+  and one eye pixel was added per frame (the source has no eye):
+  neon green #39ff14, cyan on the blackout coat, brown on the hub cat.
+  Native 16x16 cells, no resample.
+
+Sewer hound
+  Sprite: art/foes/hound.png (176x18; 8 cells of 22x18)
+  Author: Cough-E
+  Source: https://opengameart.org/content/dogwolf-spritesheet
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page lists CC0. Source file: art/_src/chars/cough-e/Dog.png, 128x32,
+  unchanged. The grey wolf row (8 walk frames) is used.
+  Modification: palette map to the sewer browns (#a08068 / #6b5344 /
+  #1a120c), eye to ember #ff9a3c, horizontal flip to face right like the
+  Kenney foes, and each 16x16 frame placed at (3,2) in the 22x18 foe box.
+  No resample.
+
+Market crab
+  Sprite: art/foes/crab.png (88x18; 4 cells of 22x18)
+  Author: Camacebra Games
+  Source: https://camacebra.itch.io/crab-pixel-art
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The itch page's asset license reads "Creative Commons Zero v1.0
+  Universal" and says no generative AI was used. The pack readme says
+  "Public license", credits not required (attribution "Camacebra Games").
+  Source frames: art/_src/chars/camacebra/CrabMoving1-4.png, unchanged,
+  with the readme. Modification: outline (77,26,26) mapped to #1a120c,
+  each 20x20 frame placed at x+1 in a 22x18 cell, feet on the last row,
+  drawn foot-aligned on the 22x16 foe box. No resample.
+
+Hub cat talk portrait
+  The 32x32 talk bust for the hub cat draws the hub-cream idle cell of
+  art/cat/cats.png (kotnaszynce, CC0, above) at an integer 2x,
+  nearest-neighbour. No new file.
+
+Bosses, wave 2 (art/boss/)
+  Offline build: art/_src/boss/build.py (Lanczos fit, alpha thresholded to 0/255, palette quantized to <=16 flat colours, 1px #0B0F1A outline). Map sheets are 3 columns (hp 3/2/1; hp2 and hp1 are darkened, hp1 gets a crack) × 2 rows (calm, telegraph = outline in the boss telegraph colour). Drawn at 1×, nearest-neighbor.
+  Untouched sources are in art/boss/source/.
+
+Bomber and zapper
+  Sprites: art/boss/bomber.png (48×40: 48×20 calm row, hot row), art/boss/zapper.png (40×32: 40×16 calm row, hot row)
+  Author: The_Scientist
+  Source: https://opengameart.org/content/ufo-boss-set
+  File: https://opengameart.org/sites/default/files/UFO%20Boss%20Sprites.zip
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page lists CC0. Credit is not required. It is recorded here anyway.
+  Modification: Same set as the dasher. Top-left 128×48 frame of each 256×144 sheet, fitted to 48×20 (bomber) / 40×16 (zapper). Bomber red hull hue-shifted to parcel magenta; zapper yellow hull to violet, red lights to gold. HighDmg sheet (fire) is the hot row (frame >= 24).
+
+Cappadocia balloon
+  Sprites: art/boss/balloon.png (96×96: 32×48 cells)
+  Author: mujtaba-io
+  Source: https://opengameart.org/content/airship-and-hot-air-balloon
+  File: https://opengameart.org/sites/default/files/level1-hotairbaloon.png
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page lists CC0. Credit is not required. It is recorded here anyway.
+  Modification: Red stripes hue-shifted to magenta/violet.
+
+Paris gargoyle
+  Sprites: art/boss/gargoyle.png (96×64: 32×32 cells)
+  Author: drcorchit
+  Source: https://opengameart.org/content/gargoyle-0
+  File: https://opengameart.org/sites/default/files/gargoyle.png
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page lists CC0. Credit is not required. It is recorded here anyway.
+  Modification: Luminance mapped onto the Paris zinc ramp.
+
+Santorini mill
+  Sprites: art/boss/mill.png (120×80: 40×40 cells)
+  Author: yd
+  Source: https://opengameart.org/content/windmill-0
+  File: https://opengameart.org/sites/default/files/windmill.gif
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page lists CC0. Credit is not required. It is recorded here anyway.
+  Modification: GIF frame 0 only. Luminance mapped onto a Santorini blue/cream ramp.
+
+Ha Long dragon
+  Sprites: art/boss/dragon.png (132×88: 44×44 cells)
+  Author: Blarumyrran
+  Source: https://opengameart.org/content/dragons
+  File: https://opengameart.org/sites/default/files/pisilohepunane3.png
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page lists CC0. Credit is not required. It is recorded here anyway.
+  Modification: Red hue-shifted to jade. Full (risen) poses use dragon.png. The periscope and bob
+  head, art/boss/dragon-head.png (42×40: 14×20 cells), is the head (56,50)-(84,80) set on a neck
+  cut from the raised wing arm (62,15)-(72,45) of the same file. The bob pose draws its top 10 rows.
+
+Canyon scorpion
+  Sprites: art/boss/scorpion.png (96×64: 32×32 cells)
+  Author: MadameBerry
+  Source: https://opengameart.org/content/scorpy-scorp-side-scroller-enemy
+  File: https://opengameart.org/sites/default/files/Scorpion.png
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page lists CC0. Credit is not required. It is recorded here anyway.
+  Modification: Luminance mapped onto the canyon ramp. The low pose, art/boss/scorpion-low.png
+  (96×64), is the same sprite squashed to 55% height and set on the roof line.
+
+Machu totem
+  Sprites: art/boss/totem.png and art/boss/totem-low.png (96×64 each: 32×32 cells)
+  Author: Blaze Fyruss
+  Source: https://opengameart.org/content/totem-pole-enemy
+  File: https://opengameart.org/sites/default/files/TotemParts.png
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page lists CC0. Credit is not required. It is recorded here anyway.
+  Modification: composed from the parts sheet. Standing pose: owl block with wings over the
+  blue face over the dark face. Low pose: the three blocks set in the code's three block rects.
+
+Rio samba bird
+  Sprites: art/boss/carnival.png (96×64: 32×32 cells)
+  Author: moikmellah
+  Source: https://opengameart.org/content/animated-birds-32x32
+  File: https://opengameart.org/sites/default/files/birds.32x32.png
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  The page lists CC0. Credit is not required. It is recorded here anyway.
+  Modification: First 32×32 frame, magenta key removed, native size, luminance mapped onto a carnival magenta/gold ramp.
+
+Neon dasher
+  Sprites: art/boss/neon.png (132×32: 44×16 cells)
+  Author: Luis Zuno (ansimuz)
+  Source: https://opengameart.org/content/warped-vehicles
+  File: https://opengameart.org/sites/default/files/warped_vehicles_files.zip (sprites/vehicle 3/vehicle-3-static.png)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  CC0. Credit is not required. It is recorded here anyway.
+  Modification: Flipped so the nose leads left, nearest-fit to 44×16, yellow hull hue-shifted to cyan, blue glass to magenta.
+
+Sahara wyrm
+  Sprites: art/boss/wyrm.png (138×64: 46×32 cells) and art/boss/wyrm-hump.png (96×16: 32×8 cells)
+  Author: bevouliin.com
+  Source: https://opengameart.org/content/bevouliin-free-sprite-sheets-underground-worm-monster
+  File: https://opengameart.org/sites/default/files/underground%20worm%20monster%20sprite%20sheets.zip (Transparent PNG/frame-1.png)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  CC0. Credit is not required. It is recorded here anyway.
+  Modification: Fitted to 46×32, luminance mapped onto the Sahara ramp. The buried hump is the top 7 rows of the same head over a 1px sand line.
+
+Fuji kite
+  Sprites: art/boss/kite.png (144×112: 48×56 cells)
+  Author: Pixor library ("Made with Pixor")
+  Source: https://pixor.art/library/toys/kite-toy/
+  File: https://pixor.art/library/files/kite-toy/pixor-library-kite-toy.zip (sprites/selout/kite-toy-64px-8-sides.png, front frame)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  CC0. Credit is not required. It is recorded here anyway.
+  Modification: Sail hollowed to a 2–3px rim with the dark spars kept, stick dropped, ribbon tail redrawn as white/ink stitches at the same pixels. hp2 cuts the lower-right rim, hp1 also the lower-left.
+
+Iceland jelly
+  Sprites: art/boss/jelly.png (156×80: 52×40 cells)
+  Author: Technozomians
+  Source: https://opengameart.org/content/technozomians-jellyfish
+  File: https://opengameart.org/sites/default/files/Jellyfish.png
+  License: https://creativecommons.org/licenses/by/3.0/
+  The page lists CC-BY 3.0. Credit is required: "Jellyfish" by Technozomians, CC-BY 3.0, modified.
+  Modification: Luminance mapped onto an ice ramp. hp2 removes tentacle 2, hp1 tentacles 2 and 4 (source x 70–86 and 112–128 below y 66), like the code jelly.
+
+Venice barge
+  Sprites: art/boss/barge.png (96×64: 32×32 cells)
+  Author: nightm4re
+  Source: https://opengameart.org/content/viking-ship
+  File: https://opengameart.org/sites/default/files/prop-longship.png
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  CC0. Credit is not required. It is recorded here anyway.
+  Modification: First 100×66 frame, fitted to 32×32, green sail stripes hue-shifted to Venice gold.
+
+Biome roof faces
+  Sprites: art/tiles/*-tileset.png (11 biomes)
+  Author: Kenney
+  Source: https://kenney.nl/assets/tiny-town
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: wall, window and slot cells recoloured per biome day/night
+  palette by art/_src/biome-tiles/build.py. 1x, no resample.
+
+Biome cloud plates
+  Sprites: art/bg/clouds/*.png
+  Author: Luis Zuno (ansimuz), Warped Ocean View
+  Source: https://opengameart.org/content/warped-ocean-view
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: noon cloud layer cropped to 320x104 and recoloured to each
+  biome's sky ramp. 1x.
+
+Rooftop props (AC, water tower, zipline mast, pool water)
+  Sprite: art/tiles/roof-props.png
+  Author: Kenney
+  Sources: https://kenney.nl/assets/roguelike-modern-city
+           https://kenney.nl/assets/pixel-platformer
+           https://kenney.nl/assets/pixel-platformer-industrial-expansion
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: cropped, greys mapped to the game's navy ramp. 1x.
+
+Far desert ridge (Canyon, Sahara, Cappadocia skies)
+  Sprites: art/bg/ridge/*.png
+  Author: Emcee Flesher, edit of Quantiset's Mars background
+  Source: https://opengameart.org/content/rocky-desert-landscape-layered-looping
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: far-mountain layer scaled 1/4 nearest, cropped, recoloured.
+
+Sewer and metro conduits
+  Sprites: art/sewer/pipes-h.png, art/sewer/pipes-v.png
+  Author: Kenney
+  Source: https://kenney.nl/assets/pixel-platformer-industrial-expansion
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: pipe rows recoloured to the sewer conduit colours. 1x.
+
+Environment props (dish, solar, antenna, vent, planter, vending, awning,
+market canopies, moon)
+  Sprite: art/tiles/env-props.png
+  Author: Pixor library
+  Source: https://pixor.art/library/ (satellite-dish, sci-solar-panel,
+          sci-beacon, sci-vent, tree-planter, vending-machine, market-stall,
+          stall-fruit, stall-fish, moon)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: south view downscaled 1x, cropped, greys mapped to the
+  game's navy ramp.
+
+Pool ladder, sewer valve, apartment wall band and window frame
+  Sprites: art/tiles/env-props.png, art/tiles/room.png
+  Author: Kenney
+  Sources: https://kenney.nl/assets/pixel-platformer
+           https://kenney.nl/assets/pixel-platformer-industrial-expansion
+           https://kenney.nl/assets/tiny-town
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: cropped, recoloured to the game palette. 1x.
+
+Items, second pass (power-ups magnet / slow-mo / decoy and their HUD cells,
+gear icons, apartment lamp and sill pot)
+  Loader: item-cast.js (same exact-size contract, code drawing is the fallback)
+  Ledger: art/items/manifest-v2.json, build: tools/build-items-v2.py
+  Unmodified sources kept in art/items/source-v2/.
+
+  Sprites: art/items/pu-magnet.png, pu-magnet-hud.png
+  Author: Pixnote Pixels ("Magnet pixel art")
+  Source: https://pixnote.net/en/pixels/magnet/ (https://pixnote.net/pixels/png/magnet.png)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: trimmed, 1px #0B0F1A outline, centred in 12x12; HUD cell is a 2x downscale.
+
+  Sprites: art/items/pu-slowmo.png, pu-slowmo-hud.png
+  Author: Pixnote Pixels ("Hourglass pixel art")
+  Source: https://pixnote.net/en/pixels/hourglass/ (https://pixnote.net/pixels/png/hourglass.png)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: frame to the game outline, glass to ice cyan, sand to #ffd23f, 1px outline.
+
+  Sprites: art/items/pu-decoy.png, pu-decoy-hud.png
+  Author: Pixnote Pixels ("Ghost pixel art")
+  Source: https://pixnote.net/en/pixels/ghost/ (https://pixnote.net/pixels/png/ghost.png)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: recoloured to the decoy violet #c08bff with a lit top edge.
+
+  Sprites: art/items/charm_bell.png
+  Author: Pixnote Pixels ("Bell pixel art")
+  Source: https://pixnote.net/en/pixels/bell/ (https://pixnote.net/pixels/png/bell.png)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: blue to gold ramp, 1px outline, bottom-aligned in 16x16.
+
+  Sprites: art/items/lamp-desk.png
+  Author: Pixnote Pixels ("Lamp pixel art")
+  Source: https://pixnote.net/en/pixels/lamp/ (https://pixnote.net/pixels/png/lamp.png)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: shade to warm amber, dark base, 1px outline, 10x13.
+
+  Sprites: art/items/shoe_grip.png, shoe_legend.png
+  Author: SpritePilot ("Free Pixel Art RPG Items", Boots)
+  Source: https://spritepilot.com/free-game-assets/items
+          (https://spritepilot.com/free-assets/items/boots-16px_strip8.png)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: frame 0 of the 8-frame strip, 1x. shoe_legend maps the
+  leather ramp to a gold ramp.
+
+  Sprites: art/items/glove_soft.png
+  Author: Alex's Assets ("16x16 RPG Item Pack")
+  Source: https://alexs-assets.itch.io/16x16-rpg-item-pack (store preview
+          https://img.itch.zone/aW1hZ2UvOTgwODAvNDU5NDMxLnBuZw==/original/FJtmvp.png)
+  License: https://creativecommons.org/publicdomain/zero/1.0/
+  Modification: the glove cell read back exactly from the 4x preview to 1x 16x16.
+
+  Sprites: art/items/pot-sill.png
+  Derived from art/items/plant_pot.png (Kenney Pixel Platformer Farm
+  Expansion, CC0, credited above). 2x downscale to 8x8.

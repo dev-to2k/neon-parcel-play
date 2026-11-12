@@ -1,0 +1,30 @@
+Sewer floors compose the CC0 brick strip at native 1×. Three palette files
+were made offline from that strip. The walk lip, the solid rectangles, and
+the route are unchanged. Valves, shutters, fish, foes, and the other props
+are still the old drawing.
+
+walls.png
+  Free 16x16 sewer walls by Chris_M_The_Game_Dude.
+  https://opengameart.org/content/free-16x16-sewer-stuffz
+  License: CC0 1.0 Universal.
+  The file is the 176x16 wall strip with the two extra bytes after IEND removed.
+  Credit is not required by CC0. It is recorded here anyway.
+
+algae.png
+  Free 16x16 sewer algae by Chris_M_The_Game_Dude, same page and license.
+  The source strip is kept. moss.png is that strip with the wet-floor palette
+  applied offline. It is stamped on floor 1 only.
+
+brick-1.png, brick-2.png, brick-3.png
+  The same walls.png strip. Each file maps the three source colors
+  (15,2,34), (51,34,107), and (71,51,137) to that floor's brick colors.
+  No new pixels were drawn. Floor 1 is the cool sewer, floor 2 the gray
+  metro, floor 3 the brown market. The walk lip and the solid rectangles
+  are unchanged. Props, enemies, and the route are not claimed done.
+
+Reviewed and not shipped, because they do not fit this side-view palette:
+  Reflextions, Market Stand (CC0). Flat kiosk art with saturated red stripes.
+  Efilheim, Ever Rogue Tileset (CC0). Top-down tiles, wrong camera.
+  Kenney, Pixel Platformer Industrial Expansion (CC0). Outlined props, hazard
+  stripes, and generic crates. The pack was not copied into the tree.
+  0x72 sewer expansion is paid and was not downloaded.
