@@ -1,7 +1,7 @@
 {
   "name": "Neon Parcel",
   "short_name": "Neon Parcel",
-  "description": "Rooftop night courier. The playfield stays 480×270.",
+  "description": "Phong, chàng bưu tá gốc Sài Gòn, chạy mái nhà thành phố neon giao kiện khắp 17 nước, rồi giao cả thư về quá khứ.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "fullscreen",

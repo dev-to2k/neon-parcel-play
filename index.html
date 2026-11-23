@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; media-src 'self' data: blob:; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="google" content="notranslate">
 <meta name="theme-color" content="#0B0F1A">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -14,31 +15,49 @@
 <link rel="icon" href="icons/icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <title>Neon Parcel — rooftop night courier</title>
+<meta name="description" content="Neon Parcel: Phong, chàng bưu tá gốc Sài Gòn, chạy mái nhà thành phố neon giao kiện khắp 17 nước, rồi giao cả thư về quá khứ. Nhặt kiện hồng, đạp drone, hạ trùm. Chơi ngay trên trình duyệt, không cần cài.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Neon Parcel">
+<meta property="og:title" content="Neon Parcel — shipper đêm trên mái nhà">
+<meta property="og:description" content="Phong, chàng bưu tá gốc Sài Gòn, chạy mái nhà thành phố neon giao kiện khắp 17 nước và 10 thời đại. Deliver the post. Across rooftops. Across centuries.">
+<meta property="og:url" content="https://dev-to2k.github.io/neon-parcel-play/">
+<meta property="og:image" content="https://dev-to2k.github.io/neon-parcel-play/og/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Màn hình tiêu đề Neon Parcel: logo neon trên nền thành phố đêm">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   html,body{margin:0;height:100%;background:#05071a;color:#fff;font-family:'HubPixel';font-size:12px;-webkit-font-smoothing:none;font-smooth:never;overflow:hidden}
   #wrap{position:relative;width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
-  #frame{position:relative;box-shadow:0 0 0 3px #0B0F1A,0 0 0 5px #ff2bd6,0 0 40px #ff2bd655,0 0 80px #2bfff233}
+  #frame{--ring:5px;position:relative;box-shadow:0 0 0 3px #0B0F1A,0 0 0 var(--ring) #ff2bd6,0 0 40px #ff2bd655,0 0 80px #2bfff233}
   canvas{display:block;image-rendering:pixelated;image-rendering:crisp-edges;touch-action:none}
-  #scan{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
+  #scan{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px)}
   @font-face{font-family:'HubPixel';src:url('fonts/fusion-pixel-12px-latin.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block}
   html.font-failed,html.font-failed body{font-family:ui-monospace,monospace}
-  #help{font-size:12px;letter-spacing:0;line-height:16px;color:#2bfff2;opacity:.92;text-align:center;max-width:100%;padding:0 16px;box-sizing:border-box}
-  #help b{color:#ff2bd6}
-  body[data-state=play] #help,body[data-state=pause] #help{visibility:hidden}
+  #ask{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;background:rgba(5,7,26,.62)}
+  #ask form{display:flex;flex-direction:column;gap:10px;min-width:240px;padding:14px 16px;background:#0b0f1a;border:2px solid #ffb25a;box-shadow:0 0 0 2px #05071a,0 0 24px #ff2bd655}
+  #ask[hidden]{display:none}
+  #ask label{color:#fff6e8}
+  #ask input{font:inherit;font-size:16px;letter-spacing:1px;text-transform:uppercase;padding:6px 8px;background:#121626;color:#fff6e8;border:1px solid #3a4258;outline:none}
+  #ask input:focus{border-color:#2bfff2}
+  #ask form div{display:flex;gap:8px;justify-content:flex-end}
+  #ask button{font:inherit;padding:6px 12px;background:#3a2448;color:#fff6e8;border:1px solid #ffb25a;cursor:pointer}
 </style>
 <link rel="stylesheet" href="touch.css">
 </head>
 <body data-state="title">
 <div id="wrap">
   <div id="frame"><canvas id="game" width="480" height="270" aria-label="Neon Parcel"></canvas><div id="scan"></div></div>
-  <div id="help"><b>A/D</b> chạy · <b>SPACE/W</b> nhảy (giữ = cao hơn) · <b>E</b> nói chuyện, nhận đơn · <b>đạp</b> drone và trùm · <b>S</b> dậm trên không · <b>SHIFT</b> lướt mái · <b>giữ S</b> tăng tốc (kỹ năng mở theo Đêm) · <b>P/Esc</b> tạm dừng · <b>M</b> tắt tiếng</div>
 </div>
 <div id="touch" hidden></div>
-<div id="rotate" hidden><p>Xoay ngang màn hình để chơi</p></div>
-<script defer src="np-classic.3192951067.js"></script>
-<script type="module" src="np-game.ee7f40e6e1.js"></script>
-<link rel="modulepreload" href="np-dun.2605c77438.js">
-<link rel="modulepreload" href="np-forge.b5a0d68ddf.js">
-<link rel="modulepreload" href="np-touch.bc1f2219bd.js">
+<div id="ask" hidden><form id="ask-form"><label id="ask-t" for="ask-in"></label><input id="ask-in" autocomplete="off" autocapitalize="characters" spellcheck="false"><div><button type="button" id="ask-no"></button><button id="ask-ok"></button></div></form></div>
+<div id="rotate" hidden><p data-i18n="rotate">Xoay ngang màn hình để chơi</p></div>
+<script defer src="np-classic.a86fb76cb9.js"></script>
+<script type="module" src="np-game.8f2f7515c2.js"></script>
+<link rel="modulepreload" href="np-dun.0ab67388a0.js">
+<link rel="modulepreload" href="np-forge.1ed1451f5c.js">
+<link rel="modulepreload" href="np-touch.ae7531eab1.js">
 </body>
 </html>
